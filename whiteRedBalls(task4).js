@@ -1,4 +1,4 @@
-const solution = (str) => {
+const whiteRedBalls = (str) => {
     let count = 0
     let swaps = 0;
     const first = str.indexOf('R');
@@ -14,4 +14,4 @@ const solution = (str) => {
 }
 const str = 'WRRWWR';
 
-console.log(solution(str))
+console.log(whiteRedBalls(str))

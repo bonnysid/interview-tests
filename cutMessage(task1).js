@@ -1,4 +1,4 @@
-const solution = (msg, k) => {
+const cutMessage = (msg, k) => {
     if (msg.length <= k) return msg;
     let length = 0;
     return msg
@@ -17,4 +17,4 @@ const solution = (msg, k) => {
 const msg = 'The quick brown fox jumps over the lazy dog';
 const k = 39;
 
-console.log(solution(msg, k))
+console.log(cutMessage(msg, k))

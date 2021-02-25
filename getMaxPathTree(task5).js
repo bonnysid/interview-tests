@@ -1,4 +1,4 @@
-const solution = (node) => {
+const getMaxPathTree = (node) => {
     let distincts = [];
 
     const checkNode = (x, node) => node ? node.x > x : false;
@@ -41,4 +41,4 @@ const tree = {
         }
 }
 
-console.log(solution(tree))
+console.log(getMaxPathTree(tree))

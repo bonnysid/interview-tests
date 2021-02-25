@@ -1,4 +1,4 @@
-const solution = (x, y) => {
+const maxWidthRoad = (x, y) => {
     const xCopy = [...x].sort((a, b) => a - b);
     // const dumpX = [];
     const lengths = [];
@@ -14,4 +14,4 @@ const solution = (x, y) => {
 const x = [1, 8, 7, 3, 4, 1, 8];
 const y = [6, 4, 1, 8, 5, 1, 7];
 
-console.log(solution(x,y));
+console.log(maxWidthRoad(x,y));

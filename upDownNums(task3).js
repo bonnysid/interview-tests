@@ -1,4 +1,4 @@
-const solution = (array) => {
+const upDownNums = (array) => {
     let changes = 0;
     let isPrevTreeMore = false;
 
@@ -15,4 +15,4 @@ const solution = (array) => {
 
 const arr = [5, 4, 3, 2, 6];
 
-console.log(solution(arr));
+console.log(upDownNums(arr));
