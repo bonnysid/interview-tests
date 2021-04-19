@@ -1,4 +1,4 @@
-const groupBy = (data: any, callback: (item: any) => string | number) => {
+const groupBy = <T>(data: T[], callback: (item: T) => string | number) :{[key: string]: T[] } => {
     return data.reduce((res, item) => {
         const key = callback(item)
         return {
@@ -8,7 +8,7 @@ const groupBy = (data: any, callback: (item: any) => string | number) => {
     }, {})
 }
 
-const resNum = groupBy([1.2, 1.1, 2.3, 0.4], Math.floor)
+const resNum = groupBy<number>([1.2, 1.1, 2.3, 0.4], Math.floor)
 const expectResNum = {
     "0": [0.4],
     "1": [1.2, 1.1],
@@ -16,7 +16,7 @@ const expectResNum = {
 }
 console.log(resNum)
 
-const resLength = groupBy(["one", "two", "three"], (el) => el.length)
+const resLength = groupBy<string>(["one", "two", "three"], (el) => el.length)
 const expectResLength = {
     "3": ["one", "two"],
     "5": ["three"],
@@ -29,7 +29,12 @@ enum Gender {
     Female,
 }
 
-const resGender = groupBy(
+interface IGenderObj {
+    g: Gender,
+    n: string
+}
+
+const resGender = groupBy<IGenderObj>(
     [
         {g: Gender.Male, n: "A"},
         {g: Gender.Female, n: "B"},
