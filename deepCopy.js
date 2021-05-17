@@ -1,4 +1,4 @@
-const isObject = obj => typeof obj === 'object'
+const isObject = obj => typeof obj === 'object' && obj instanceof Object
 
 const deepCopy = (object) => {
 
