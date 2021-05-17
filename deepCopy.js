@@ -5,9 +5,7 @@ const deepCopy = (object) => {
     if(Array.isArray(object)) {
         const copy = [...object]
 
-        copy.forEach((item, i) => {
-            if(isObject(item)) copy[i] = deepCopy(item)
-        })
+        copy.forEach((item, i) => copy[i] = deepCopy(item))
 
         return copy
     }
